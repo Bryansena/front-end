@@ -1,0 +1,228 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Inder", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    scroll-behavior: smooth;
+}
+nav {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(210, 180, 140, 85%);
+    z-index: 1;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: saddlebrown;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.fundo1 {
+    background-image: url("../imagens/bg01.jpg");
+}
+.fundo2 {
+    background-image: url("../imagens/bg02.jpg");
+}
+.fundo3 {
+    background-image: url("../imagens/bg03.jpg");
+}
+.fundo4 {
+    background-image: url("../imagens/bg04.jpg");
+}
+.fundo1, .fundo2, .fundo3, .fundo4 {
+    position: relative;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.destaque {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    color: saddlebrown;
+    background-color: wheat;
+    border-radius: 15px;
+    padding: 10px;
+    width: 40%;
+    font-size: 1rem;
+    filter: drop-shadow(4px 4px floralwhite);
+    margin: auto;
+}
+.conteudo {
+    color: saddlebrown;
+    background-color: floralwhite;
+    padding: 120px 25px;
+}
+.texto {
+    text-align: justify;
+}
+h3 {
+    text-transform: uppercase;
+    color: brown;
+}
+img {
+    width: 100%;
+}
+.video {
+    width: 60%;
+    border: 5px ridge tan;
+    border-radius: 8px;
+}
+.quadro_animado {
+    width: 320px;
+    height: 200px;
+    margin: auto;
+    background-size: cover;
+    border-radius: 5%;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-name: muda_imagem;
+}
+@keyframes muda_imagem {
+    0%{
+        background-image: url(../imagens/foto1.jpg);
+    }
+    20%{
+        background-image: url(../imagens/foto2.jpg);
+    }
+    40%{
+        background-image: url(../imagens/foto3.jpg);
+    }
+    60%{
+        background-image: url(../imagens/foto4.jpg);
+    }
+    80%{
+        background-image: url(../imagens/foto5.jpg);
+    }
+    100%{
+        background-image: url(../imagens/foto1.jpg);
+    }
+}
+.texto_animado {
+    width: 90%;
+    margin: 20px auto;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-name: troca_cor;
+}
+@keyframes troca_cor {
+    0% {
+        background-color: beige;
+        color: saddlebrown;
+    }
+    25% {
+        background-color: wheat;
+        color: orangered;
+    }
+    50% {
+        background-color: burlywood;
+        color: maroon;
+    }
+    75% {
+        background-color: wheat;
+        color: orangered;
+    }
+    100% {
+        background-color: beige;
+        color: saddlebrown;
+    }
+
+}
+.container {
+    display: flex;
+    align-items: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 50px auto;
+    box-sizing: border-box;
+}
+.flor {
+    width: 60%;
+    margin: 30px;
+}
+.nome {
+    color: saddlebrown;
+    border-radius: 6px;
+    padding: 5px;
+}
+footer {
+    color: saddlebrown;
+    background-color: rgba(210, 180, 140, 85%);
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    nav {
+        padding: 20px 0px;
+    }
+    ul {
+        padding: 5px;
+    }
+    li {
+        width: 20%;
+        float: left;
+        border-radius: 10px;
+        transition: background-color 2s;
+    }
+    li:hover {
+         background-color:  rgba(255, 250, 240, 0.35);
+    }
+    a {
+        font-size: 1.25rem;
+    }
+    .destaque {
+        padding: 10px;
+        font-size: 2rem;
+        width: 25%;
+        transition: width 1s;
+    }
+    .destaque:hover {
+        width: 30%;
+    }
+    .conteudo {
+        padding: 120px;
+    }
+    .clipe {
+        width: 60%;
+    }
+    .quadro_animado {
+        width: 496px;
+        height: 320px;
+    }
+    .texto_animado {
+        width: 70%;
+    }
+    .container {
+        width: 100%;
+    }
+    .flor {
+        width: 15%;
+        margin: 0;
+    }
+    .flor img {
+        transition: 2s;
+    }
+    .flor:hover {
+        transition:  rotate(-5deg);
+    }
+    .nome {
+        visibility: hidden;
+    }
+    .flor:hover .nome{
+        visibility: visible;
+    }
+
+}
